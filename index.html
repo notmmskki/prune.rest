@@ -17,10 +17,17 @@
       justify-content: center;
     }
 
+    .container {
+      text-align: center;
+    }
+
     .fade-in {
-      font-size: 3em;
       opacity: 0;
       animation: fadeIn 3s ease-in forwards;
+    }
+
+    .fade-in:nth-child(2) {
+      animation-delay: 3s;
     }
 
     @keyframes fadeIn {
@@ -28,9 +35,22 @@
         opacity: 1;
       }
     }
+
+    .title {
+      font-size: 3em;
+      margin: 0.2em 0;
+    }
+
+    .subtitle {
+      font-size: 1.5em;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
-  <div class="fade-in">prune</div>
+  <div class="container">
+    <div class="fade-in title">prune</div>
+    <div class="fade-in subtitle">you love your future</div>
+  </div>
 </body>
 </html>
