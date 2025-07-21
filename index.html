@@ -1,56 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>prune</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prune - Discord Bot</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base styles and font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #E5E7EB; /* A slightly off-white for better readability */
+            overflow-x: hidden;
+        }
 
-    .container {
-      text-align: center;
-    }
+        /* Starry background effect */
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
 
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 3s ease-in forwards;
-    }
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: animStar linear infinite;
+        }
 
-    .fade-in:nth-child(2) {
-      animation-delay: 3s;
-    }
+        @keyframes animStar {
+            from {
+                transform: translateY(0vh);
+            }
+            to {
+                transform: translateY(-100vh);
+            }
+        }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
+        /* Custom glow for the highlighted text */
+        .text-glow {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+        }
 
-    .title {
-      font-size: 3em;
-      margin: 0.2em 0;
-    }
+        /* Fade-in animation for the whole page */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-    .subtitle {
-      font-size: 1.5em;
-      color: #aaa;
-    }
-  </style>
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Grey glow effect for buttons on hover */
+        .btn-glow:hover {
+            box-shadow: 0 0 15px rgba(156, 163, 175, 0.4); /* gray-400 glow */
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <div class="fade-in title">prune</div>
-    <div class="fade-in subtitle">you love your future</div>
-  </div>
+<body class="bg-black">
+
+    <!-- Starry Background Container -->
+    <div class="stars-container" id="stars-wrapper"></div>
+
+    <!-- Main Container with Fade-in Effect -->
+    <div class="relative min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 fade-in">
+        
+        <!-- Navigation -->
+        <header class="absolute top-0 left-0 right-0 p-4 z-10">
+            <!-- Made nav background transparent and kept the blur -->
+            <nav class="max-w-2xl mx-auto flex items-center justify-center backdrop-blur-sm border border-gray-800 rounded-full p-1">
+                <div class="flex items-center space-x-1">
+                    <!-- Adjusted padding and image size -->
+                    <a href="#" class="p-1 rounded-full bg-gray-900/50 hover:bg-gray-800 transition-colors">
+                        <img src="https://cdn.discordapp.com/attachments/972488991804899369/1368432776612675705/fe58d8cd919ca585510d7b0f987ad325_1.jpg?ex=687f08d6&is=687db756&hm=492ddc29ca0920285f69168a0bb7171e81f049cf519eb47513c5e15f1b9c51ad&" alt="Prune Logo" class="w-7 h-7 rounded-full object-cover">
+                    </a>
+                    <a href="#" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-full transition-colors">Commands</a>
+                    <a href="#" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-full transition-colors">FAQ</a>
+                    <a href="#" class="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-full">Premium</a>
+                    <a href="#" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-full transition-colors">Discord</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="text-center z-0 mt-20 sm:mt-0">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-gray-200 tracking-tight">
+                Prune is Discord's<br>premier <span class="text-white text-glow">all-in-one bot</span>
+            </h1>
+            
+            <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-400">
+                A versatile multipurpose bot designed to elevate your Discord server and DMs with powerful features and intuitive user-focused commands.
+            </p>
+
+            <p class="mt-6 text-sm text-gray-500">
+                serving <span class="font-bold text-gray-300">208,000+</span> users and <span class="font-bold text-gray-300">8,520+</span> guilds
+            </p>
+
+            <!-- Feature Tags -->
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+                <div class="flex items-center space-x-2 bg-gray-900/80 border border-gray-800 rounded-full px-4 py-2 text-sm text-gray-300">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>social media</span>
+                </div>
+                <div class="flex items-center space-x-2 bg-gray-900/80 border border-gray-800 rounded-full px-4 py-2 text-sm text-gray-300">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 6l12 3"></path></svg>
+                    <span>lastfm integration</span>
+                </div>
+                <div class="flex items-center space-x-2 bg-gray-900/80 border border-gray-800 rounded-full px-4 py-2 text-sm text-gray-300">
+                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    <span>ai tools</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons with Glow Effect -->
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button class="w-full sm:w-auto flex items-center justify-center space-x-2 bg-gray-900/80 border border-gray-700 hover:border-gray-500 text-white font-semibold rounded-lg px-6 py-3 transition-all duration-300 btn-glow">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                    <span>Add to Discord</span>
+                </button>
+                <button class="w-full sm:w-auto flex items-center justify-center space-x-2 bg-gray-900/80 border border-transparent hover:bg-gray-800 text-gray-300 hover:text-white font-semibold rounded-lg px-6 py-3 transition-all duration-300 btn-glow">
+                    <span>Premium</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // JavaScript to create the starry background
+        document.addEventListener('DOMContentLoaded', function() {
+            const starsWrapper = document.getElementById('stars-wrapper');
+            if (!starsWrapper) return;
+
+            const starCount = 200; // Number of stars
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random size
+                const size = Math.random() * 2 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+
+                // Random position
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.left = `${Math.random() * 100}vw`;
+
+                // Random animation duration and delay
+                const duration = Math.random() * 100 + 50;
+                star.style.animationDuration = `${duration}s`;
+                star.style.animationDelay = `-${Math.random() * duration}s`;
+
+                starsWrapper.appendChild(star);
+            }
+        });
+    </script>
+
 </body>
 </html>
