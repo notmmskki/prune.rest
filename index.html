@@ -3,172 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prune - Discord Bot</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Base styles and font */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #000;
-            color: #E5E7EB; /* A slightly off-white for better readability */
-            overflow-x: hidden;
-        }
-
-        /* Starry background effect */
-        .stars-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .star {
-            position: absolute;
-            background-color: white;
-            border-radius: 50%;
-            animation: animStar linear infinite;
-        }
-
-        @keyframes animStar {
-            from {
-                transform: translateY(0vh);
-            }
-            to {
-                transform: translateY(-100vh);
-            }
-        }
-
-        /* Custom glow for the highlighted text */
-        .text-glow {
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-        }
-
-        /* Fade-in animation for the whole page */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .fade-in {
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        /* Grey glow effect for buttons on hover */
-        .btn-glow:hover {
-            box-shadow: 0 0 15px rgba(156, 163, 175, 0.4); /* gray-400 glow */
-        }
-    </style>
+    <title>Prune - The Ultimate Discord Bot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-black">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#get-started" class="nav-link">Get Started <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#invite">Invite Bot</a></li>
+                        <li><a href="#setup">Setup Guide</a></li>
+                        <li><a href="#tutorial">Tutorial</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#commands" class="nav-link">Commands</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#status" class="nav-link">Status</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#documentation" class="nav-link">Documentation <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#docs">API Docs</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <!-- Starry Background Container -->
-    <div class="stars-container" id="stars-wrapper"></div>
-
-    <!-- Main Container with Fade-in Effect -->
-    <div class="relative min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 fade-in">
-        
-        <!-- Navigation -->
-        <header class="absolute top-0 left-0 right-0 p-4 z-10">
-            <!-- Made nav background transparent and kept the blur -->
-            <nav class="max-w-2xl mx-auto flex items-center justify-center backdrop-blur-sm border border-gray-800 rounded-full p-1">
-                <div class="flex items-center space-x-1">
-                    <!-- Adjusted padding and image size -->
-                    <a href="#" class="p-1 rounded-full bg-gray-900/50 hover:bg-gray-800 transition-colors">
-                        <img src="https://cdn.discordapp.com/attachments/972488991804899369/1368432776612675705/fe58d8cd919ca585510d7b0f987ad325_1.jpg?ex=687f08d6&is=687db756&hm=492ddc29ca0920285f69168a0bb7171e81f049cf519eb47513c5e15f1b9c51ad&" alt="Prune Logo" class="w-7 h-7 rounded-full object-cover">
-                    </a>
-                    <a href="#" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-full transition-colors">Commands</a>
-                    <a href="#" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-full transition-colors">FAQ</a>
-                    <a href="#" class="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-full">Premium</a>
-                    <a href="#" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-full transition-colors">Discord</a>
-                </div>
-            </nav>
-        </header>
-
-        <!-- Main Content -->
-        <main class="text-center z-0 mt-20 sm:mt-0">
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-gray-200 tracking-tight">
-                Prune is Discord's<br>premier <span class="text-white text-glow">all-in-one bot</span>
-            </h1>
-            
-            <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-400">
-                A versatile multipurpose bot designed to elevate your Discord server and DMs with powerful features and intuitive user-focused commands.
-            </p>
-
-            <p class="mt-6 text-sm text-gray-500">
-                serving <span class="font-bold text-gray-300">208,000+</span> users and <span class="font-bold text-gray-300">8,520+</span> guilds
-            </p>
-
-            <!-- Feature Tags -->
-            <div class="mt-8 flex flex-wrap justify-center gap-3">
-                <div class="flex items-center space-x-2 bg-gray-900/80 border border-gray-800 rounded-full px-4 py-2 text-sm text-gray-300">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <span>social media</span>
-                </div>
-                <div class="flex items-center space-x-2 bg-gray-900/80 border border-gray-800 rounded-full px-4 py-2 text-sm text-gray-300">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 6l12 3"></path></svg>
-                    <span>lastfm integration</span>
-                </div>
-                <div class="flex items-center space-x-2 bg-gray-900/80 border border-gray-800 rounded-full px-4 py-2 text-sm text-gray-300">
-                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                    <span>ai tools</span>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <div class="anime-character">
+                    <div class="character-circle">
+                        <img src="https://cdn.discordapp.com/attachments/1216916194355970069/1399739658379984896/IMG_8324.jpg?ex=688a18a4&is=6888c724&hm=bfa34760e3ae9a1619ff017763fc95084b16043d2a1e3dd67c73cda123f62e8c&" alt="Anime characters sharing a tender moment" class="anime-image">
+                    </div>
                 </div>
             </div>
-
-            <!-- Action Buttons with Glow Effect -->
-            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <button class="w-full sm:w-auto flex items-center justify-center space-x-2 bg-gray-900/80 border border-gray-700 hover:border-gray-500 text-white font-semibold rounded-lg px-6 py-3 transition-all duration-300 btn-glow">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                    <span>Add to Discord</span>
-                </button>
-                <button class="w-full sm:w-auto flex items-center justify-center space-x-2 bg-gray-900/80 border border-transparent hover:bg-gray-800 text-gray-300 hover:text-white font-semibold rounded-lg px-6 py-3 transition-all duration-300 btn-glow">
-                    <span>Premium</span>
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </button>
+            <div class="hero-text">
+                <h1 class="hero-title">The simple, aesthetic multi-purpose Discord bot you need.</h1>
+                <p class="hero-stats">Powering <span class="highlight">7,177,523</span> users in over <span class="highlight">22,090</span> servers.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Add to server
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-terminal"></i>
+                        View commands
+                    </button>
+                </div>
             </div>
-        </main>
-    </div>
-    
-    <script>
-        // JavaScript to create the starry background
-        document.addEventListener('DOMContentLoaded', function() {
-            const starsWrapper = document.getElementById('stars-wrapper');
-            if (!starsWrapper) return;
+        </div>
+    </section>
 
-            const starCount = 200; // Number of stars
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">
+                    This isn't your typical, <span class="highlight">average aesthetic bot.</span>
+                </h2>
+                <p class="section-subtitle">We offer a wide range of quality features to enhance your server.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Moderation</h3>
+                    <p>Keep your server in check with extensive commands and features.</p>
+                    <a href="#" class="feature-link">Start moderating <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Music</h3>
+                    <p>Play music from YouTube, Spotify, Soundcloud, and more.</p>
+                    <a href="#" class="feature-link">Start listening <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>VoiceMaster</h3>
+                    <p>Allow users to create temporary voice channels.</p>
+                    <a href="#" class="feature-link">Start calling <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Reposters</h3>
+                    <p>Repost content from TikTok, Twitter and more.</p>
+                    <a href="#" class="feature-link">Start reposting <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.classList.add('star');
-                
-                // Random size
-                const size = Math.random() * 2 + 1;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
+    <!-- Popular Feature Section -->
+    <section id="popular-feature" class="popular-feature">
+        <div class="container">
+            <div class="popular-card fade-in">
+                <div class="popular-tag">
+                    <i class="fas fa-star"></i>
+                    Our most popular feature
+                </div>
+                <div class="popular-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3>AutoPost</h3>
+                <p>Automatically post content from curated sources to your server.</p>
+                <a href="#" class="popular-link">Start posting <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
 
-                // Random position
-                star.style.top = `${Math.random() * 100}vh`;
-                star.style.left = `${Math.random() * 100}vw`;
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2 class="cta-title">What are you waiting for?</h2>
+                <p class="cta-subtitle">Join the <span class="highlight">22,090</span> servers using Prune today.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Add me
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-book"></i>
+                        Read the docs
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                // Random animation duration and delay
-                const duration = Math.random() * 100 + 50;
-                star.style.animationDuration = `${duration}s`;
-                star.style.animationDelay = `-${Math.random() * duration}s`;
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="logo-text">Prune</span>
+                    </div>
+                    <p class="footer-description">Prune is a multi-purpose Discord bot made to enhance your server.</p>
+                    <p class="footer-copyright">© Prune. All rights reserved. 2023-present.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-section">
+                        <h4>Website</h4>
+                        <ul>
+                            <li><a href="#invite">Invite</a></li>
+                            <li><a href="#documentation">Documentation</a></li>
+                            <li><a href="#support">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#terms">Terms of Service</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-                starsWrapper.appendChild(star);
-            }
-        });
-    </script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
