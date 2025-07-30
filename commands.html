@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prune Commands - Complete Command Reference</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#commands" class="nav-link active">Commands</a>
+                </li>
+                <li class="nav-item">
+                    <a href="status.html" class="nav-link">Status</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#documentation" class="nav-link">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Commands Page Content -->
+    <div class="commands-page">
+        <div class="container">
+            <!-- Commands Header -->
+            <div class="commands-header">
+                <h1>Commands</h1>
+                <p>Explore and learn about all available commands</p>
+                <div class="command-stats">
+                    <span class="stat-tag">985 Total Commands</span>
+                    <span class="stat-tag">13 Categories</span>
+                </div>
+            </div>
+
+            <!-- New Documentation Announcement -->
+            <div class="docs-announcement">
+                <div class="announcement-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="announcement-content">
+                    <h3>New Documentation</h3>
+                    <p>Our documentation has received a fresh new look and now includes comprehensive coverage of all features. Explore the updated documentation to learn more about our extensive command set and capabilities.</p>
+                </div>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="search-filter-bar">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="commandSearch" placeholder="Search commands... (/)">
+                </div>
+                <div class="filter-container">
+                    <select id="categoryFilter">
+                        <option value="all">All</option>
+                        <option value="fun">Fun</option>
+                        <option value="moderation">Moderation</option>
+                        <option value="utility">Utility</option>
+                        <option value="antinuke">Antinuke</option>
+                        <option value="animation">Animation</option>
+                        <option value="alias">Alias</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <!-- Commands List -->
+            <div class="commands-list" id="commandsList">
+                <!-- Fun Commands -->
+                <div class="command-card" data-category="fun">
+                    <div class="command-header">
+                        <h3>achievement</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Generate a Minecraft achievement with custom text</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,achievement &lt;text&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="utility">
+                    <div class="command-header">
+                        <h3>afk</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Set an afk message before going offline</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,afk [status]</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="fun">
+                    <div class="command-header">
+                        <h3>alert</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Generate an iPhone alert</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,alert &lt;text&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="fun">
+                    <div class="command-header">
+                        <h3>angry</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Get angry at someone.</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,angry [member]</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alias Commands -->
+                <div class="command-card" data-category="alias">
+                    <div class="command-header">
+                        <h3>alias</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">view alias sub commands</p>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="alias">
+                    <div class="command-header">
+                        <h3>alias add</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">add an alias for a command</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">create</span>
+                            <span class="alias-tag">a</span>
+                            <span class="alias-tag">c</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,alias add &lt;data&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="alias">
+                    <div class="command-header">
+                        <h3>alias list</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">show all your current command aliases</p>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="alias">
+                    <div class="command-header">
+                        <h3>alias remove</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">remove an alias from a command</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">delete</span>
+                            <span class="alias-tag">r</span>
+                            <span class="alias-tag">rem</span>
+                            <span class="alias-tag">del</span>
+                            <span class="alias-tag">d</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,alias remove [alias]</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animation Commands -->
+                <div class="command-card" data-category="animation">
+                    <div class="command-header">
+                        <h3>animate</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">No description</p>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="animation">
+                    <div class="command-header">
+                        <h3>animate 3d</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Create a 3D depth animation</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,animate 3d [attachment]</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="animation">
+                    <div class="command-header">
+                        <h3>animate boil</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Create a boiling/bubbling effect</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,animate boil [attachment]</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="animation">
+                    <div class="command-header">
+                        <h3>animate bomb</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Add an explosion animation</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,animate bomb [attachment]</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="animation">
+                    <div class="command-header">
+                        <h3>animate earthquake</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Add a shaking earthquake effect</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,animate earthquake [attachment]</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="animation">
+                    <div class="command-header">
+                        <h3>animate fan</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Create a fan blade spinning effect</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,animate fan [attachment]</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Antinuke Commands -->
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">anti-nuke command group</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">an</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke all</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle all antinuke protections</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">everything</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke all &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke ban</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle the anti ban of antinuke</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke ban &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke botadd</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle the anti bot add of antinuke</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">bot</span>
+                            <span class="alias-tag">ba</span>
+                            <span class="alias-tag">bot_add</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke botadd &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke channel</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle the anti channel update of antinuke</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">channels</span>
+                            <span class="alias-tag">channel_update</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke channel &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke channelcreate</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle the anti channel creation of antinuke</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">channel_create</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke channelcreate &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke cleanup</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">clean up antinuke settings</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">clean</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke emoji</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle the anti emoji/sticker protection of antinuke</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">emojis</span>
+                            <span class="alias-tag">emoji_update</span>
+                            <span class="alias-tag">emoji_create</span>
+                            <span class="alias-tag">sticker</span>
+                            <span class="alias-tag">stickers</span>
+                            <span class="alias-tag">sticker_update</span>
+                            <span class="alias-tag">sticker_create</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke emoji &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke guild</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle the anti guild update of antinuke</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke guild &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke rolecreate</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle the anti role creation of antinuke</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">role_create</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke rolecreate &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke settings</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">list your antinuke settings along with their thresholds</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">config</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke threshold</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">Set the threshold until antinuke bans the user</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke threshold &lt;action&gt; &lt;threshold&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke toggle</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle antinuke on/off</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">t</span>
+                            <span class="alias-tag">setup</span>
+                            <span class="alias-tag">switch</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke toggle &lt;state&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke trust</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">permit a user to use antinuke commands as an antinuke admin</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">admin</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke trust &lt;user&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke trusted</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">list all users that are trusted by antinuke</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">admins</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke vanity</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle the anti vanity url protection of antinuke</p>
+                        <div class="command-aliases">
+                            <span class="aliases-label">Aliases:</span>
+                            <span class="alias-tag">vanityurl</span>
+                            <span class="alias-tag">url</span>
+                        </div>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke vanity &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke webhooks</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">toggle the anti webhooks of antinuke</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke webhooks &lt;state&gt; &lt;flags&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card" data-category="antinuke">
+                    <div class="command-header">
+                        <h3>antinuke whitelist</h3>
+                        <div class="command-actions">
+                            <i class="fas fa-copy"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="command-content">
+                        <p class="command-description">manage antinuke whitelist</p>
+                        <div class="command-usage">
+                            <span class="usage-label">Usage:</span>
+                            <code>,antinuke whitelist &lt;action&gt; &lt;user&gt;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="commands.js"></script>
+</body>
+</html> 
