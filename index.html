@@ -9,6 +9,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Support Server Modal -->
+    <div class="modal-overlay" id="supportModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Join Our Support Server</h2>
+                <p>Get help, report bugs, and connect with the community</p>
+            </div>
+            <div class="modal-body">
+                <div class="support-info">
+                    <div class="support-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="support-text">
+                        <h3>Prune Support Community</h3>
+                        <p>Join thousands of users in our Discord server for instant support and updates.</p>
+                    </div>
+                </div>
+                <button class="btn btn-discord" id="joinServerBtn">
+                    <i class="fab fa-discord"></i>
+                    Join Server
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -22,10 +50,16 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#commands" class="nav-link">Commands</a>
+                    <a href="commands.html" class="nav-link">Commands</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#status" class="nav-link">Status</a>
+                    <a href="embed-builder.html" class="nav-link">Embed Builder</a>
+                </li>
+                <li class="nav-item">
+                    <a href="documentation.html" class="nav-link">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="status.html" class="nav-link">Status</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#documentation" class="nav-link">Documentation <i class="fas fa-chevron-down"></i></a>
@@ -76,37 +110,45 @@
                 <p class="section-subtitle">We offer a wide range of quality features to enhance your server.</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card fade-in">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Moderation</h3>
-                    <p>Keep your server in check with extensive commands and features.</p>
-                    <a href="#" class="feature-link">Start moderating <i class="fas fa-arrow-right"></i></a>
+                    <div class="feature-content">
+                        <h3>Moderation</h3>
+                        <p>Keep your server in check with extensive commands and features.</p>
+                        <a href="#" class="feature-link">Start moderating <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="feature-card fade-in">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-music"></i>
                     </div>
-                    <h3>Music</h3>
-                    <p>Play music from YouTube, Spotify, Soundcloud, and more.</p>
-                    <a href="#" class="feature-link">Start listening <i class="fas fa-arrow-right"></i></a>
+                    <div class="feature-content">
+                        <h3>Music</h3>
+                        <p>Play music from YouTube, Spotify, Soundcloud, and more.</p>
+                        <a href="#" class="feature-link">Start listening <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="feature-card fade-in">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-microphone"></i>
                     </div>
-                    <h3>VoiceMaster</h3>
-                    <p>Allow users to create temporary voice channels.</p>
-                    <a href="#" class="feature-link">Start calling <i class="fas fa-arrow-right"></i></a>
+                    <div class="feature-content">
+                        <h3>VoiceMaster</h3>
+                        <p>Allow users to create temporary voice channels.</p>
+                        <a href="#" class="feature-link">Start calling <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="feature-card fade-in">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-sync-alt"></i>
                     </div>
-                    <h3>Reposters</h3>
-                    <p>Repost content from TikTok, Twitter and more.</p>
-                    <a href="#" class="feature-link">Start reposting <i class="fas fa-arrow-right"></i></a>
+                    <div class="feature-content">
+                        <h3>Reposters</h3>
+                        <p>Repost content from TikTok, Twitter and more.</p>
+                        <a href="#" class="feature-link">Start reposting <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
