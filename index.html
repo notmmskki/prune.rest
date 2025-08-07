@@ -3,235 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prune - The Ultimate Discord Bot</title>
+    <title>Coming Soon - Million Dollar Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Support Server Modal -->
-    <div class="modal-overlay" id="supportModal">
-        <div class="modal-content">
-            <button class="modal-close" id="closeModal">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-header">
-                <h2>Join Our Support Server</h2>
-                <p>Get help, report bugs, and connect with the community</p>
-            </div>
-            <div class="modal-body">
-                <div class="support-info">
-                    <div class="support-icon">
-                        <i class="fab fa-discord"></i>
-                    </div>
-                    <div class="support-text">
-                        <h3>Prune Support Community</h3>
-                        <p>Join thousands of users in our Discord server for instant support and updates.</p>
-                    </div>
-                </div>
-                <button class="btn btn-discord" id="joinServerBtn">
-                    <i class="fab fa-discord"></i>
-                    Join Server
-                </button>
-            </div>
+    <div class="container">
+        <div class="coming-soon">
+            <h1 class="fade-in-text">COMING SOON</h1>
+        </div>
+        
+        <div class="discord-section">
+            <a href="https://discord.com/invite/prunebot" class="discord-button" target="_blank" rel="noopener noreferrer">
+                <svg class="discord-logo" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+                <span class="button-text">Join Discord</span>
+                <div class="shine-effect"></div>
+            </a>
         </div>
     </div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <ul class="nav-menu">
-                <li class="nav-item dropdown">
-                    <a href="#get-started" class="nav-link">Get Started <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#invite">Invite Bot</a></li>
-                        <li><a href="#setup">Setup Guide</a></li>
-                        <li><a href="#tutorial">Tutorial</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="commands.html" class="nav-link">Commands</a>
-                </li>
-                <li class="nav-item">
-                    <a href="embed-builder.html" class="nav-link">Embed Builder</a>
-                </li>
-                <li class="nav-item">
-                    <a href="documentation.html" class="nav-link">Documentation</a>
-                </li>
-                <li class="nav-item">
-                    <a href="status.html" class="nav-link">Status</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#documentation" class="nav-link">Documentation <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#docs">API Docs</a></li>
-                        <li><a href="#guides">Guides</a></li>
-                        <li><a href="#examples">Examples</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <div class="hero-image">
-                <div class="anime-character">
-                    <div class="character-circle">
-                        <img src="https://cdn.discordapp.com/attachments/1216916194355970069/1399739658379984896/IMG_8324.jpg?ex=688a18a4&is=6888c724&hm=bfa34760e3ae9a1619ff017763fc95084b16043d2a1e3dd67c73cda123f62e8c&" alt="Anime characters sharing a tender moment" class="anime-image">
-                    </div>
-                </div>
-            </div>
-            <div class="hero-text">
-                <h1 class="hero-title">The simple, aesthetic multi-purpose Discord bot you need.</h1>
-                <p class="hero-stats">Powering <span class="highlight">7,177,523</span> users in over <span class="highlight">22,090</span> servers.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary">
-                        <i class="fas fa-plus"></i>
-                        Add to server
-                    </button>
-                    <button class="btn btn-secondary">
-                        <i class="fas fa-terminal"></i>
-                        View commands
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2 class="section-title">
-                    This isn't your typical, <span class="highlight">average aesthetic bot.</span>
-                </h2>
-                <p class="section-subtitle">We offer a wide range of quality features to enhance your server.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Moderation</h3>
-                        <p>Keep your server in check with extensive commands and features.</p>
-                        <a href="#" class="feature-link">Start moderating <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-music"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Music</h3>
-                        <p>Play music from YouTube, Spotify, Soundcloud, and more.</p>
-                        <a href="#" class="feature-link">Start listening <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-microphone"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>VoiceMaster</h3>
-                        <p>Allow users to create temporary voice channels.</p>
-                        <a href="#" class="feature-link">Start calling <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Reposters</h3>
-                        <p>Repost content from TikTok, Twitter and more.</p>
-                        <a href="#" class="feature-link">Start reposting <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popular Feature Section -->
-    <section id="popular-feature" class="popular-feature">
-        <div class="container">
-            <div class="popular-card fade-in">
-                <div class="popular-tag">
-                    <i class="fas fa-star"></i>
-                    Our most popular feature
-                </div>
-                <div class="popular-icon">
-                    <i class="fas fa-image"></i>
-                </div>
-                <h3>AutoPost</h3>
-                <p>Automatically post content from curated sources to your server.</p>
-                <a href="#" class="popular-link">Start posting <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section id="cta" class="cta">
-        <div class="container">
-            <div class="cta-content fade-in">
-                <h2 class="cta-title">What are you waiting for?</h2>
-                <p class="cta-subtitle">Join the <span class="highlight">22,090</span> servers using Prune today.</p>
-                <div class="cta-buttons">
-                    <button class="btn btn-primary">
-                        <i class="fas fa-plus"></i>
-                        Add me
-                    </button>
-                    <button class="btn btn-secondary">
-                        <i class="fas fa-book"></i>
-                        Read the docs
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <span class="logo-text">Prune</span>
-                    </div>
-                    <p class="footer-description">Prune is a multi-purpose Discord bot made to enhance your server.</p>
-                    <p class="footer-copyright">© Prune. All rights reserved. 2023-present.</p>
-                </div>
-                <div class="footer-right">
-                    <div class="footer-section">
-                        <h4>Website</h4>
-                        <ul>
-                            <li><a href="#invite">Invite</a></li>
-                            <li><a href="#documentation">Documentation</a></li>
-                            <li><a href="#support">Support</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Legal</h4>
-                        <ul>
-                            <li><a href="#terms">Terms of Service</a></li>
-                            <li><a href="#privacy">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
+    
     <script src="script.js"></script>
 </body>
 </html> 
